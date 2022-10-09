@@ -6,27 +6,76 @@ import {
     useDisclosure,
     Slide,
     Fade,
+    CloseButton,
+    VStack,
+    Link,
+    Stack,
 } from '@chakra-ui/react'
+
 import MainLogo from '../public/svg/MainLogo'
 import MenuToggle from '../public/svg/MenuToggle'
+import PecaGas from './Buttons/pecagas'
+
+const links = [
+    {
+        title: "Botijões",
+        href: "",
+    },
+    {
+        title: "Sobre Nós",
+        href: "",
+    },
+    {
+        title: "Energia Verde",
+        href: "",
+    },
+    {
+        title: "Contato",
+        href: "",
+    },
+]
   
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure()
 
     return (
-        <Box>
+        <Box
+            pos="fixed"
+            w="100%"
+            bg="rgba(255, 255, 255, 0.8)"
+            backdropFilter="auto"
+            backdropBlur="6px"
+        >
             <Flex 
-                mx={3} 
+                mx={{lg: 20, xs: 3}} 
                 h={20} 
                 align="center" 
                 justify="space-between"
             >
                 <MainLogo />
                 <Show above="lg">
-                    {/* 
-                        Desktop Links 
-                        Can use loop trough a list of them, with name and path
-                    */}
+                    <Stack
+                        direction="row"
+                        spacing={10}
+                    >
+                        { links.map(link => {
+                            return (
+                                <Link 
+                                    href={link.href}
+                                    key={link.href}
+                                    w="fit-content"
+                                    textAlign="center"
+                                    fontSize="lg"
+                                >
+                                    {link.title}
+                                </Link>
+                            )
+                        }) }
+                    </Stack>
+                    <PecaGas 
+                        gradient={true}
+                        rightRounded={true}
+                    />
                 </Show>
                 <Hide above="lg">
                     <Fade
@@ -38,16 +87,50 @@ export default function Navbar() {
                     </Fade>
                 </Hide>
             </Flex>
-            <Slide direction='right' in={isOpen}>
+            <Slide 
+                direction='right' 
+                in={isOpen}
+            >
                 <Box
                     pos="fixed"
                     bg="ultragazBlue"
-                    w="75%"
-                    h="75vh"
+                    w="65%"
                     right={0}
-                    color="#ffffff"
+                    color="ultragazGreen"
+                    borderBottomLeftRadius="12px"
+                    p={5}
                 >
-                    Lorem Ipsum
+                    <Flex
+                        justify="space-between"
+                    >
+                        <CloseButton 
+                            size="lg" 
+                            onClick={onToggle}
+                        />
+                        <PecaGas 
+                            gradient={false}
+                            rightRounded={false}
+                        />
+                    </Flex>
+                    <VStack 
+                        spacing={16}
+                        my={12}
+                    >
+                        { links.map(link => {
+                            return (
+                                <Link 
+                                    href={link.href}
+                                    key={link.href}
+                                    w="100%"
+                                    textAlign="right"
+                                    fontSize="2xl"
+                                    fontWeight="800"
+                                >
+                                    {link.title}
+                                </Link>
+                            )
+                        }) }
+                    </VStack>
                 </Box>
             </Slide>
         </Box>
