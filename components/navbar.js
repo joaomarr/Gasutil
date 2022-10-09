@@ -45,6 +45,7 @@ export default function Navbar() {
             bg="rgba(255, 255, 255, 0.8)"
             backdropFilter="auto"
             backdropBlur="6px"
+            zIndex="10"
         >
             <Flex 
                 mx={{lg: 20, xs: 3}} 
