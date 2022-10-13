@@ -10,13 +10,15 @@ import {
 } from '@chakra-ui/react'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
 import BotijaoCard from '../components/botijaoCard'
 import PecaGas from '../components/Buttons/pecagas'
 import Navbar from '../components/navbar'
-
 import BotijõesHero from '../public/images/BotijõesHero.svg'
+import MasterCardLogo from '../public/images/MasterCardLogo.png'
+import VisaLogo from '../public/images/VisaLogo.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
-
 
 export default function Home() {
   return (
@@ -93,7 +95,7 @@ export default function Home() {
       <Box py={6} textAlign="center">
         <Heading 
           as="h3"
-          fontSize="xl"
+          fontSize={{xs: "xl", lg: "40px"}}
           fontWeight="800"
           color="ultragazBlue"
         >
@@ -108,10 +110,10 @@ export default function Home() {
         />
         <Text 
           as="p"
-          fontSize="sm"
+          fontSize={{xs: "sm", lg: "md"}}
           mx="30px"
         >
-          A Gasutil oferece dois tipos de botijão ultragaz, referência de gás no Brasil a 80 anos.
+          A Gasutil oferece dois tipos de botijão ultragaz, referência de gás no Brasil a 80 anos.<br></br>
           Ambos são botijões de gás GLP (gás de cozinha).
         </Text>
         <Flex
@@ -121,9 +123,44 @@ export default function Home() {
           position="relative"
         >
           <BotijaoFaixa />
-          <BotijaoCard botijao="P13" />
-          <BotijaoCard botijao="P45" />
+          <Box w={{xs: "75%", lg: "30%"}} left="0" top="25px" position="absolute">
+            <motion.section 
+              animate={{ y: [0, 70, 0] }}
+              transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
+            >
+              <Image src={VisaLogo} alt="Visa Logo"/>
+            </motion.section>
+          </Box>
+          <Box w={{xs: "75%", lg: "30%"}} right="0" bottom="15px" position="absolute">
+            <motion.section 
+              animate={{ y: [0, -70, 0] }}
+              transition={{ duration: 10, ease: "easeInOut", repeat: Infinity, delay: 1.8 }}
+            >
+              <Image src={MasterCardLogo} alt="MasterCard Logo"/>
+            </motion.section>
+          </Box>
+          <Flex 
+            my="50px" 
+            flexDirection={{xs: "column", lg: "row"}}
+            justify={{lg: "center"}}
+          >
+            <BotijaoCard botijao="P13" />
+            <BotijaoCard botijao="P45" />
+          </Flex>
         </Flex>
+      </Box>
+      <Flex bgGradient="linear(to-r, ultragazBlue, ultragazCyan)" w="100%" h="80px" gap={{ xs: "15px", lg: "40px" }} align="center" justify="center">
+        <Text as="span" fontSize={{xs: "xs", lg: "md"}} color="#ffffff" fontWeight="600">
+          Seu botijão a qualquer momento
+        </Text>
+        <PecaGas />
+      </Flex>
+      <Box my="50px">
+        <Box>
+          <Heading as="h5" fontSize="md">
+            Sobre nós
+          </Heading>
+        </Box>
       </Box>
     </>
   )

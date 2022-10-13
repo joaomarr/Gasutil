@@ -12,8 +12,9 @@ import P13 from '../public/images/p13.png'
 export default function BotijaoCard({ botijao }) {
     return (
         <Box
-            w="275px"
-            my="30px"
+            w={{xs: "275px", lg: "335px"}}
+            my="20px"
+            mx={{xs: "0px", lg: "8vw"}}
             px="30px"
             borderRadius="12px"
             style={{
@@ -23,9 +24,10 @@ export default function BotijaoCard({ botijao }) {
         >
             <Flex
                 w="100%"
-                h="262px"
+                h={{xs: "262px", lg: "310px"}}
                 pt="10px"
                 align={botijao === "P13" ? "center" : "start"}
+                justify="center"
                 borderBottomRadius="150px"
                 overflow="hidden"
                 style={{
@@ -42,21 +44,21 @@ export default function BotijaoCard({ botijao }) {
             <Box
                 w="100%"
                 textAlign="center"
-                mt="20px"
-                mb="12px"
+                mt={{xs: "20px", lg: "35px"}}
+                mb={{xs: "12px", lg: "20px"}}
             >
                 <Text 
                     as="h4"
                     color="ultragazBlue"
                     fontWeight="600"
-                    fontSize="lg"
+                    fontSize={{xs: "lg", lg: "xl"}}
                 >
                     Botijão {botijao}
                 </Text>
                 <Text
                     as="h5"
                     color="#ffffff"
-                    fontSize="5xl"
+                    fontSize={{xs: "5xl", lg: "6xl"}}
                     fontWeight="900"
                 >
                     R$100,<Text as="span" fontSize="lg">99</Text>
