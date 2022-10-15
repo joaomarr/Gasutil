@@ -19,6 +19,7 @@ import BotijõesHero from '../public/images/BotijõesHero.svg'
 import MasterCardLogo from '../public/images/MasterCardLogo.png'
 import VisaLogo from '../public/images/VisaLogo.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
+import UltragazWaves from '../public/svg/UltragazWaves.js'
 
 export default function Home() {
   return (
@@ -155,11 +156,51 @@ export default function Home() {
         </Text>
         <PecaGas />
       </Flex>
-      <Box my="50px">
-        <Box>
-          <Heading as="h5" fontSize="md">
+      <Flex 
+        my="50px"
+        flexDirection={{xs: "column", md: "row"}}
+        justify={{md: "space-between"}}
+      >
+        <Box px={{xs: "25px", md: 20}} my="auto" w={{xs: "100%", md: "50%"}}>
+          <Text as="h5" fontSize={{xs: "md", md: "lg"}} fontWeight={700} position="relative" mb="40px"
+             _before={{
+              content: `""`,
+              position: "absolute",
+              bottom: "-10px",
+              width: "150px",
+              height: "4px",
+              bgGradient: "linear(to-r, ultragazCyan, ultragazBlue)",
+            }}
+          >
             Sobre nós
-          </Heading>
+          </Text>
+          <Box>
+            <Heading 
+              as="h3" 
+              my="18px"
+              w={{xs: "100%", md: "500px"}}
+              fontSize={{xs: "3xl", md: "5xl"}}
+              color="ultragazBlue" 
+              fontWeight={800}
+            >
+              Por que somos melhores que outras revendedoras?
+            </Heading>
+            <Text as="p" fontSize={{xs: "base", md: "lg"}}>
+              Estamos há mais de 30 anos no mercado de Gás GLP, levando aos nossos clientes serviço de confiança, profissionais treinados e capacitados com veículos e EPI’s novos, um produto de extrema qualidade e com o peso correto.
+              Buscando sempre entregar com rapidez, agilidade e segurança.
+              Todo botijão comercializado por nós é enmvasado com bases certificadas, sob normas rígidas de produção, sempre lacrado e com dicas de utilização e segurança. 
+            </Text>
+          </Box>
+        </Box>
+        <Box w={{xs: "100%", md: "40%"}} maxW="600px" my="25px">
+          <UltragazWaves />
+        </Box>
+      </Flex>
+      <Box 
+        style={{background: "linear-gradient(90deg, #FFFFFF 10.1%, rgba(255, 255, 255, 0) 100%)",}}
+      >
+        <Box>
+
         </Box>
       </Box>
     </>
