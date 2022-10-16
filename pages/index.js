@@ -18,6 +18,7 @@ import Navbar from '../components/navbar'
 import BotijõesHero from '../public/images/BotijõesHero.svg'
 import MasterCardLogo from '../public/images/MasterCardLogo.png'
 import VisaLogo from '../public/images/VisaLogo.png'
+import UltragazEnergia from '../public/images/ultragaz_energia.jpg'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
 
@@ -196,12 +197,53 @@ export default function Home() {
           <UltragazWaves />
         </Box>
       </Flex>
-      <Box 
+      <Box
+        my="25px"
+        px={{xs: "25px", md: "20"}}
+        w={{xs: "100%", md: "fit-content"}}
+        mx="auto"
         style={{background: "linear-gradient(90deg, #FFFFFF 10.1%, rgba(255, 255, 255, 0) 100%)",}}
       >
-        <Box>
-
-        </Box>
+        <Flex 
+          w="100%"
+          border="1px"
+          borderColor="#BBBCBC"
+          borderRadius="12px"
+          flexDirection={{xs: "column-reverse", md: "row"}}
+          overflow="hidden"
+        >
+          <Flex my="50px" mx={{xs: "25px", md: "65px"}} flexDirection="column" justify="center" w={{xs: "100%", md: "50%"}}>
+            <Heading as="h5" fontWeight="900" fontSize={{xs: "xl", md: "3xl"}}>
+              Lorem ipsum dolor sit amet
+            </Heading>
+            <Text my="15px" fontSize={{xs: "sm", md: "md"}}>
+              Aut reiciendis molestiae et dolores consequatur id maxime laborum est sunt tempora et quidem necessitatibus. 
+            </Text>
+            <Link style={{ textDecoration: 'none' }}>
+              <Button
+                w="150px"
+                h="30px"
+                bg="ultragazBlue"
+                color="#ffffff"
+                fontWeight="600"
+                fontSize={{xs: "xs", md: "sm"}}
+                rounded="20px"
+              >
+                Lorem Ipsum
+              </Button>
+            </Link>
+          </Flex>
+          <Box h={{xs: "50%", md: "100%"}} w={{xs: "100%", md: "50%"}} position="relative" overflow="hidden">
+            <Image src={UltragazEnergia} alt="Ultragaz Energia" layout="responsive"/>
+            <Box
+              position="absolute"
+              bottom="0"
+              h={{xs: "100px", md: "100%"}}
+              w={{xs: "100%", md: "100px"}}
+              bgGradient={{xs: "linear(to-t, #FFFFFF, rgba(255, 255, 255, 0))", md: "linear(to-r, #FFFFFF, rgba(255, 255, 255, 0))"}}
+            />
+          </Box>
+        </Flex>
       </Box>
     </>
   )
