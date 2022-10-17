@@ -19,6 +19,8 @@ import BotijõesHero from '../public/images/BotijõesHero.svg'
 import MasterCardLogo from '../public/images/MasterCardLogo.png'
 import VisaLogo from '../public/images/VisaLogo.png'
 import UltragazEnergia from '../public/images/ultragaz_energia.jpg'
+import UltragazSomandoEnergia from '../public/images/UltragazSomandoEnergia.png'
+import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
 
@@ -200,12 +202,14 @@ export default function Home() {
       <Box
         my="25px"
         px={{xs: "25px", md: "20"}}
-        w={{xs: "100%", md: "fit-content"}}
+        w="100%"
         mx="auto"
-        style={{background: "linear-gradient(90deg, #FFFFFF 10.1%, rgba(255, 255, 255, 0) 100%)",}}
+        style={{background: "linear-gradient(360deg, #EFF0F0 73.94%, rgba(239, 240, 240, 0) 75.84%)",}}
       >
         <Flex 
-          w="100%"
+          w={{xs: "100%", md: "65%"}}
+          wMax="465px"
+          mx="auto"
           border="1px"
           borderColor="#BBBCBC"
           borderRadius="12px"
@@ -243,6 +247,19 @@ export default function Home() {
               bgGradient={{xs: "linear(to-t, #FFFFFF, rgba(255, 255, 255, 0))", md: "linear(to-r, #FFFFFF, rgba(255, 255, 255, 0))"}}
             />
           </Box>
+        </Flex>
+        <Flex 
+          flexDirection={{xs: "column", md: "row-reverse"}}
+          position="relative" 
+          justify="center"
+          gap="20px"
+          w="100%" 
+          my="80px"
+        >
+            <Box position={{xs: "absolute", md: "relative"}}>
+              <Image src={ArvoreUltragaz} alt="Sustentabilidade" />
+            </Box>
+            <Image src={UltragazSomandoEnergia} alt="Ultragaz Somando Energia" w="286" h="161" objectFit='contain'/>
         </Flex>
       </Box>
     </>
