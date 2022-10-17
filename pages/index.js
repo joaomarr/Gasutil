@@ -23,6 +23,7 @@ import UltragazSomandoEnergia from '../public/images/UltragazSomandoEnergia.png'
 import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
+import Adress from '../components/address.js'
 
 export default function Home() {
   return (
@@ -201,7 +202,7 @@ export default function Home() {
       </Flex>
       <Box
         my="25px"
-        px={{xs: "25px", md: "20"}}
+        px={{xs: "25px", md: 20}}
         w="100%"
         mx="auto"
         style={{background: "linear-gradient(360deg, #EFF0F0 73.94%, rgba(239, 240, 240, 0) 75.84%)",}}
@@ -261,6 +262,9 @@ export default function Home() {
             </Box>
             <Image src={UltragazSomandoEnergia} alt="Ultragaz Somando Energia" w="286" h="161" objectFit='contain'/>
         </Flex>
+      </Box>
+      <Box px={{xs: "25px", md: 20}} my="25px">
+        <Adress />
       </Box>
     </>
   )
