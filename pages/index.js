@@ -11,10 +11,13 @@ import {
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-
 import BotijaoCard from '../components/botijaoCard'
 import PecaGas from '../components/Buttons/pecagas'
 import Navbar from '../components/navbar'
+import Adress from '../components/address.js'
+import Map from '../components/map'
+import Footer from '../components/footer'
+
 import BotijõesHero from '../public/images/BotijõesHero.svg'
 import MasterCardLogo from '../public/images/MasterCardLogo.png'
 import VisaLogo from '../public/images/VisaLogo.png'
@@ -23,8 +26,6 @@ import UltragazSomandoEnergia from '../public/images/UltragazSomandoEnergia.png'
 import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
-import Adress from '../components/address.js'
-import Map from '../components/map'
 
 export default function Home() {
   return (
@@ -40,8 +41,8 @@ export default function Home() {
           h="85vh"
           minH="460px"
           maxH="1200px"
-          borderRadius="24px"
-          borderBottomRightRadius="168px"
+          borderRadius={{xs: "24px", md: "48px"}}
+          borderBottomRightRadius={{xs: "168px", md: "340px"}}
           justifyContent="space-between"
           align="center"
           direction={{xs: "column", lg: "row"}}
@@ -306,6 +307,7 @@ export default function Home() {
             <PecaGas gradient={true} />
         </Flex>
       </Flex>
+      <Footer />
     </>
   )
 }

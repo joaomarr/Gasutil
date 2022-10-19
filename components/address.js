@@ -5,11 +5,11 @@ import {
     Heading,
 } from '@chakra-ui/react'
 
-export default function Adress() {
+export default function Adress({ fixed }) {
     return (
         <Flex
             align="center"
-            color="rgba(0, 0, 0, 0.5)"
+            color={fixed ? "#00000" : "rgba(0, 0, 0, 0.5)"}
             transition="color 200ms linear"
             _hover={{ color: "#000000" }}
             cursor="pointer"
