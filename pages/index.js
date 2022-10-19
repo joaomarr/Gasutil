@@ -184,7 +184,7 @@ export default function Home() {
               as="h3" 
               my="18px"
               w={{xs: "100%", md: "500px"}}
-              fontSize={{xs: "3xl", md: "5xl"}}
+              fontSize={{xs: "2xl", md: "5xl"}}
               color="ultragazBlue" 
               fontWeight={800}
             >
@@ -258,6 +258,7 @@ export default function Home() {
           gap="20px"
           w="100%" 
           my="80px"
+          overflow="hidden"
         >
             <Box position={{xs: "absolute", md: "relative"}}>
               <Image src={ArvoreUltragaz} alt="Sustentabilidade" />
@@ -265,10 +266,46 @@ export default function Home() {
             <Image src={UltragazSomandoEnergia} alt="Ultragaz Somando Energia" w="286" h="161" objectFit='contain'/>
         </Flex>
       </Box>
-      <Box px={{xs: "25px", md: 20}} my="25px">
-        <Adress />
-        <Map />
-      </Box>
+      <Flex px={{xs: "25px", md: 20}} my="25px" flexDirection={{xs: "column", xl: "row"}} textAlign="end">
+        <Box w={{xs: "100%", md: "50%"}}>
+          <Adress />
+          <Map />
+        </Box>
+        <Flex w={{xs: "100%", xl: "50%"}} align="end" flexDirection="column">
+          <Text as="h5" fontSize={{xs: "md", md: "lg"}} fontWeight={700} position="relative" mb="40px"
+            _before={{
+              content: `""`,
+              position: "absolute",
+              bottom: "-10px",
+              right: "0",
+              width: "150px",
+              height: "4px",
+              bgGradient: "linear(to-r, ultragazCyan, ultragazBlue)",
+            }}
+          >
+            Contato
+          </Text>
+          <Heading 
+              as="h3" 
+              my="18px"
+              w={{xs: "100%", md: "500px"}}
+              fontSize={{xs: "2xl", md: "5xl"}}
+              color="ultragazBlue" 
+              fontWeight={800}
+            >
+              Para pedir seu botijão ligue 👇📞
+            </Heading>
+            <Box mb={{xs: "25px", md: "35px"}}>
+              <Text as="p" fontSize={{xs: "base", md: "lg"}} mb="15px">
+                <Text as="span" fontWeight="700">0800 039 1919</Text> - Telefone fixo <br></br>
+              </Text>
+              <Text as="p" fontSize={{xs: "base", md: "lg"}}>
+                <Text as="span" fontWeight="700">3373.2225</Text> - Whatsapp
+              </Text>
+            </Box>
+            <PecaGas gradient={true} />
+        </Flex>
+      </Flex>
     </>
   )
 }
