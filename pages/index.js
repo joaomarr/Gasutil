@@ -24,6 +24,7 @@ import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
 import Adress from '../components/address.js'
+import Map from '../components/map'
 
 export default function Home() {
   return (
@@ -209,6 +210,7 @@ export default function Home() {
       >
         <Flex 
           w={{xs: "100%", md: "65%"}}
+          bg="#ffffff"
           wMax="465px"
           mx="auto"
           border="1px"
@@ -265,6 +267,7 @@ export default function Home() {
       </Box>
       <Box px={{xs: "25px", md: 20}} my="25px">
         <Adress />
+        <Map />
       </Box>
     </>
   )
