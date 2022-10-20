@@ -9,7 +9,7 @@ export default function Adress({ fixed }) {
     return (
         <Flex
             align="center"
-            color={fixed ? "#00000" : "rgba(0, 0, 0, 0.5)"}
+            color={fixed ? "#000000" : "rgba(0, 0, 0, 0.5)"}
             transition="color 200ms linear"
             _hover={{ color: "#000000" }}
             cursor="pointer"

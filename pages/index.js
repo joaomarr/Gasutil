@@ -26,6 +26,7 @@ import UltragazSomandoEnergia from '../public/images/UltragazSomandoEnergia.png'
 import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
+import PecaGasHolder from '../components/Buttons/pecagasholder'
 
 export default function Home() {
   return (
@@ -308,6 +309,7 @@ export default function Home() {
         </Flex>
       </Flex>
       <Footer />
+      <PecaGasHolder />
     </>
   )
 }
