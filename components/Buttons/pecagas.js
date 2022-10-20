@@ -19,6 +19,8 @@ export default function PecaGas({ gradient, rightRounded }) {
     return (
         <Link
             style={{ textDecoration: 'none' }}
+            href="https://api.whatsapp.com/send?phone=553133732225"
+            target="_blank"
         >
             <Button
                 borderRadius="20px"

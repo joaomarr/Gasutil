@@ -30,6 +30,14 @@ import UltragazWaves from '../public/svg/UltragazWaves.js'
 import PecaGasHolder from '../components/Buttons/pecagasholder'
 
 export default function Home() {
+
+  const scrollSaibaMais = () => {
+    window.scrollTo({
+        top: document.getElementById("botijões").offsetTop - 100,
+        behavior: 'smooth',
+    })
+  }
+
   return (
     <>
       <Navbar />
@@ -69,7 +77,7 @@ export default function Home() {
             </Text>
             <Stack spacing={4} direction="row">
               <PecaGas rightRounded={true}/>
-              <Link style={{ textDecoration: 'none' }}>
+              <Link style={{ textDecoration: 'none' }} onClick={() => scrollSaibaMais()}>
                   <Button
                       borderRadius="20px"
                       borderBottomRightRadius="64px"
@@ -101,7 +109,7 @@ export default function Home() {
           </Box>
         </Flex>
       </Box>
-      <Box py={6} textAlign="center">
+      <Box py={6} textAlign="center" id="botijões">
         <Heading 
           as="h3"
           fontSize={{xs: "xl", lg: "40px"}}
@@ -168,6 +176,7 @@ export default function Home() {
         my="50px"
         flexDirection={{xs: "column", md: "row"}}
         justify={{md: "space-between"}}
+        id="sobrenos"
       >
         <Box px={{xs: "25px", md: 20}} my="auto" w={{xs: "100%", md: "50%"}}>
           <Text as="h5" fontSize={{xs: "md", md: "lg"}} fontWeight={700} position="relative" mb="40px"
@@ -205,6 +214,7 @@ export default function Home() {
         </Box>
       </Flex>
       <Box
+        id="energiaverde"
         my="25px"
         px={{xs: "25px", md: 20}}
         w="100%"
@@ -229,7 +239,7 @@ export default function Home() {
             <Text my="15px" fontSize={{xs: "sm", md: "md"}}>
               Aut reiciendis molestiae et dolores consequatur id maxime laborum est sunt tempora et quidem necessitatibus. 
             </Text>
-            <Link style={{ textDecoration: 'none' }}>
+            <Link style={{ textDecoration: 'none' }} href="https://www.ultragazenergia.com.br/?utm_medium=001HY000004k0p7YAA" target="_blank">
               <Button
                 w="150px"
                 h="30px"
@@ -276,7 +286,7 @@ export default function Home() {
           <Adress />
           <Map />
         </Box>
-        <Flex w={{xs: "100%", xl: "50%"}} align="end" flexDirection="column">
+        <Flex w={{xs: "100%", xl: "50%"}} align="end" flexDirection="column" id="contato">
           <Text as="h5" fontSize={{xs: "md", md: "lg"}} fontWeight={700} position="relative" mb="40px"
             _before={{
               content: `""`,

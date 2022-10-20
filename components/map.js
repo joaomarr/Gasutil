@@ -32,7 +32,7 @@ export default function Map() {
                 <MarkerF 
                     position={compCoords} 
                 />
-                <Box w="80px" h="100%" position="absolute" right={-4} bgGradient="linear(to-r, #FFFFFF, rgba(255, 255, 255, 0))"></Box>
+                <Box w="80px" h="100%" position="absolute" right={-4} bgGradient="linear(to-l, #FFFFFF, rgba(255, 255, 255, 0))"></Box>
             </GoogleMap>
         )
     }

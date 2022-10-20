@@ -15,6 +15,8 @@ export default function PecaGasHolder() {
             position="fixed"
             bottom={{xs: 5, md: 10}}
             right={{xs: "25px", md: 20}}
+            href="https://api.whatsapp.com/send?phone=553133732225"
+            target="_blank"
         >
             <Center
                 cursor="pointer"

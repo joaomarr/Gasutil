@@ -8,9 +8,9 @@ import {
     Fade,
     CloseButton,
     VStack,
-    Link,
     Stack,
     useColorModeValue,
+    Button,
 } from '@chakra-ui/react'
 
 import MainLogo from '../public/svg/MainLogo'
@@ -20,24 +20,31 @@ import PecaGas from './Buttons/pecagas'
 const links = [
     {
         title: "Botijões",
-        href: "",
+        href: "botijões",
     },
     {
         title: "Sobre Nós",
-        href: "",
+        href: "sobrenos",
     },
     {
         title: "Energia Verde",
-        href: "",
+        href: "energiaverde",
     },
     {
         title: "Contato",
-        href: "",
+        href: "contato",
     },
 ]
   
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure()
+
+    const scrollToEl = (elId) => {
+        window.scrollTo({
+            top: document.getElementById(elId).offsetTop - 100,
+            behavior: 'smooth',
+        })
+    }
 
     return (
         <Box
@@ -62,15 +69,16 @@ export default function Navbar() {
                     >
                         { links.map(link => {
                             return (
-                                <Link 
-                                    href={link.href}
+                                <Button 
+                                    onClick={() => scrollToEl(link.href)}
+                                    bg="transparent"
                                     key={link.href}
                                     w="fit-content"
                                     textAlign="center"
                                     fontSize="lg"
                                 >
                                     {link.title}
-                                </Link>
+                                </Button>
                             )
                         }) }
                     </Stack>
@@ -120,8 +128,9 @@ export default function Navbar() {
                     >
                         { links.map(link => {
                             return (
-                                <Link 
-                                    href={link.href}
+                                <Button
+                                    onClick={() => scrollToEl(link.href)}
+                                    bg="transparent"
                                     key={link.href}
                                     w="100%"
                                     textAlign="right"
@@ -129,7 +138,7 @@ export default function Navbar() {
                                     fontWeight="800"
                                 >
                                     {link.title}
-                                </Link>
+                                </Button>
                             )
                         }) }
                     </VStack>
