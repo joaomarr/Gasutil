@@ -5,8 +5,16 @@ import {
 import { ArrowUpIcon } from '@chakra-ui/icons'
 
 export default function ToTop() {
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
-        <Link>
+        <Link onClick={() => scrollUp()}>
             <Button
                 borderRadius="100%"
                 h={{xs: "80px",md: "100px"}}
