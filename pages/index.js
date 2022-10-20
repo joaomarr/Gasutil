@@ -7,6 +7,7 @@ import {
   Button,
   Stack,
   Divider,
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 import Image from 'next/image'
@@ -158,7 +159,7 @@ export default function Home() {
         </Flex>
       </Box>
       <Flex bgGradient="linear(to-r, ultragazBlue, ultragazCyan)" w="100%" h="80px" gap={{ xs: "15px", lg: "40px" }} align="center" justify="center">
-        <Text as="span" fontSize={{xs: "xs", lg: "md"}} color="#ffffff" fontWeight="600">
+        <Text as="span" fontSize={{xs: "9px", lg: "md"}} color="#ffffff" fontWeight="600">
           Seu botijão a qualquer momento
         </Text>
         <PecaGas />
@@ -207,21 +208,21 @@ export default function Home() {
         my="25px"
         px={{xs: "25px", md: 20}}
         w="100%"
+        h="fit-content"
         mx="auto"
-        style={{background: "linear-gradient(360deg, #EFF0F0 73.94%, rgba(239, 240, 240, 0) 75.84%)",}}
+        bgGradient={useColorModeValue("linear(to-t, #EFF0F0 73.94%, rgba(239, 240, 240, 0) 75.84%)", "linear(to-t, #000000 73.94%, rgba(0, 0, 0, 0) 75.84%)")}
       >
         <Flex 
-          w={{xs: "100%", md: "65%"}}
-          bg="#ffffff"
-          wMax="465px"
+          w={{xs: "100%", lg: "950px"}}
+          bg={useColorModeValue("#FFFFFF", "#000000")}
           mx="auto"
           border="1px"
           borderColor="#BBBCBC"
           borderRadius="12px"
-          flexDirection={{xs: "column-reverse", md: "row"}}
+          flexDirection={{xs: "column-reverse", lg: "row"}}
           overflow="hidden"
         >
-          <Flex my="50px" mx={{xs: "25px", md: "65px"}} flexDirection="column" justify="center" w={{xs: "100%", md: "50%"}}>
+          <Flex my="50px" mx={{xs: "25px", md: "65px"}} flexDirection="column" justify="center" w={{lg: "50%"}}>
             <Heading as="h5" fontWeight="900" fontSize={{xs: "xl", md: "3xl"}}>
               Lorem ipsum dolor sit amet
             </Heading>
@@ -242,14 +243,16 @@ export default function Home() {
               </Button>
             </Link>
           </Flex>
-          <Box h={{xs: "50%", md: "100%"}} w={{xs: "100%", md: "50%"}} position="relative" overflow="hidden">
-            <Image src={UltragazEnergia} alt="Ultragaz Energia" layout="responsive"/>
+          <Box h={{xs: "50%", md: "100%"}} w={{xs: "100%", lg: "50%"}} position="relative" overflow="hidden">
+            <Image src={UltragazEnergia} alt="Ultragaz Energia" layout="responsive" objectFit="cover"/>
             <Box
               position="absolute"
               bottom="0"
               h={{xs: "100px", md: "100%"}}
               w={{xs: "100%", md: "100px"}}
-              bgGradient={{xs: "linear(to-t, #FFFFFF, rgba(255, 255, 255, 0))", md: "linear(to-r, #FFFFFF, rgba(255, 255, 255, 0))"}}
+              bgGradient={{
+                xs: useColorModeValue("linear(to-t, #FFFFFF, rgba(255, 255, 255, 0))", "linear(to-t, #000000, rgba(255, 255, 255, 0))"), 
+                md: useColorModeValue("linear(to-r, #FFFFFF, rgba(255, 255, 255, 0))", "linear(to-r, #000000, rgba(255, 255, 255, 0))")}}
             />
           </Box>
         </Flex>

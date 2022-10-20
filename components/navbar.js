@@ -10,6 +10,7 @@ import {
     VStack,
     Link,
     Stack,
+    useColorModeValue,
 } from '@chakra-ui/react'
 
 import MainLogo from '../public/svg/MainLogo'
@@ -42,7 +43,7 @@ export default function Navbar() {
         <Box
             pos="fixed"
             w="100%"
-            bg="rgba(255, 255, 255, 0.8)"
+            bg={useColorModeValue("rgba(255, 255, 255, 0.8)", "rgba(0, 0, 0, 0.8)")}
             backdropFilter="auto"
             backdropBlur="6px"
             zIndex="10"

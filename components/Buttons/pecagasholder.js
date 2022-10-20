@@ -14,13 +14,13 @@ export default function PecaGasHolder() {
         <Link
             position="fixed"
             bottom={{xs: 5, md: 10}}
-            right={{xs: 5, md: 10}}
+            right={{xs: "25px", md: 20}}
         >
             <Center
                 cursor="pointer"
                 borderRadius="100%"
-                h={{xs: "80px", md: "110px"}}
-                w={{xs: "80px", md: "110px"}}
+                h={{xs: "80px",md: "100px"}}
+                w={{xs: "80px",md: "100px"}}
                 bgGradient="linear(to-b, #01FF15 0%, #42A5F5 122.5%)"
                 boxShadow='dark-lg'
                 transition="800ms"

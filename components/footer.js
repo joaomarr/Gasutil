@@ -5,6 +5,7 @@ import {
     Text,
     Divider,
     Link,
+    useColorModeValue,
 } from '@chakra-ui/react'
 import MainLogo from '../public/svg/MainLogo'
 import Adress from './address'
@@ -18,7 +19,7 @@ export default function Footer() {
             w="100%"
             bgGradient="linear(to-r, #00FAFF 67.32%, #01FF15 100%)"
         >
-            <Box bgGradient="linear(to-b, #ffffff, rgba(217, 217, 217, 0))" w="100%" h={{xs: "50px", md: "100px"}}/>
+            <Box bgGradient={useColorModeValue("linear(to-b, #ffffff, rgba(217, 217, 217, 0))", "linear(to-b, rgba(217, 217, 217, 0), rgba(217, 217, 217, 0))")} w="100%" h={{xs: "50px", md: "100px"}}/>
             <Flex flexDirection={{xs: "column", xl: "row"}} px={{xs: "25px", xl: 20}} justify="space-between">
                 <Box>
                     <MainLogo />

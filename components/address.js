@@ -3,18 +3,23 @@ import {
     Flex,
     Text,
     Heading,
+    useColorModeValue,
 } from '@chakra-ui/react'
 
 export default function Adress({ fixed }) {
+    
+    const color = useColorModeValue("rgba(0, 0, 0, 0.5)", "rgba(255, 255, 255, 0.5)")
+    const colorFixed = useColorModeValue("#000000", "#ffffff")
+
     return (
         <Flex
             align="center"
-            color={fixed ? "#000000" : "rgba(0, 0, 0, 0.5)"}
+            color={fixed ? colorFixed : color}
             transition="color 200ms linear"
-            _hover={{ color: "#000000" }}
+            _hover={{ color: colorFixed }}
             cursor="pointer"
         >
-            <Box w="10px" h={10} bg="#000000" mt="2px"/>
+            <Box w="10px" h={10} bg={colorFixed} mt="2px"/>
             <Heading as="h5" fontSize={{ xs: "4xl", md: "5xl" }} fontWeight={900} mx="8px">
                 MG
             </Heading>
