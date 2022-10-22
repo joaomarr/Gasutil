@@ -29,6 +29,7 @@ import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
 import PecaGasHolder from '../components/Buttons/pecagasholder'
 import { p13Int, p13Cents, p45Int, p45Cents } from '../lib/constants'
+import Head from 'next/head'
 
 export default function Home() {
 
@@ -41,6 +42,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Gasutil - Revendedora Ultragaz</title>
+      </Head>
       <Navbar />
       <Box
         pt="80px"
@@ -50,7 +54,7 @@ export default function Home() {
         <Flex
           bg="linear-gradient(104.51deg, #000FFF 0%, #00FAFF 100%)"
           h="85vh"
-          minH="460px"
+          minH="760px"
           maxH="1200px"
           borderRadius={{xs: "24px", md: "48px"}}
           borderBottomRightRadius={{xs: "168px", md: "340px"}}
@@ -68,10 +72,10 @@ export default function Home() {
           >
             <Heading
               as="h1"
-              fontSize={{xs: "36px", lg: "58px", "2xl": "80px"}}
+              fontSize={{xs: "36px", lg: "50px", "2xl": "80px"}}
               fontWeight={800}
             >
-              Seu gás onde, como e quando quiser
+              Mais de 30 anos de tradição, levando o melhor que tem no mercado
             </Heading>
             <Text py={{xs: 4,lg: 12}} fontSize={{xs: "14px", lg: "20px", "2xl": "26px"}}>
               Há mais de 30 anos entregando o gás da sua casa. Uma das maiores e mais reconhecidas revendedoras <Text color="ultragazCyan" as="span">ultragaz</Text> de Belo Horizonte e região.
@@ -201,7 +205,7 @@ export default function Home() {
               color="ultragazBlue" 
               fontWeight={800}
             >
-              Por que somos melhores que outras revendedoras?
+              Por que somos os melhores do mercado?
             </Heading>
             <Text as="p" fontSize={{xs: "base", md: "lg"}}>
               Estamos há mais de 30 anos no mercado de Gás GLP, levando aos nossos clientes serviço de confiança, profissionais treinados e capacitados com veículos e EPI’s novos, um produto de extrema qualidade e com o peso correto.
