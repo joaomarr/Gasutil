@@ -9,7 +9,7 @@ import Image from 'next/image'
 import P45 from '../public/images/p45.png'
 import P13 from '../public/images/p13.png'
 
-export default function BotijaoCard({ botijao }) {
+export default function BotijaoCard({ botijao, intPrice, centsPrice }) {
     return (
         <Box
             w={{xs: "275px", lg: "335px"}}
@@ -61,7 +61,7 @@ export default function BotijaoCard({ botijao }) {
                     fontSize={{xs: "5xl", lg: "6xl"}}
                     fontWeight="900"
                 >
-                    R$100,<Text as="span" fontSize="lg">99</Text>
+                    R${intPrice},<Text as="span" fontSize="lg">{centsPrice}</Text>
                 </Text>
             </Box>
         </Box>

@@ -28,6 +28,7 @@ import ArvoreUltragaz from '../public/images/ArvoreUltragaz.png'
 import BotijaoFaixa from '../public/svg/BotijaoFaixa.js'
 import UltragazWaves from '../public/svg/UltragazWaves.js'
 import PecaGasHolder from '../components/Buttons/pecagasholder'
+import { p13Int, p13Cents, p45Int, p45Cents } from '../lib/constants'
 
 export default function Home() {
 
@@ -161,8 +162,8 @@ export default function Home() {
             flexDirection={{xs: "column", lg: "row"}}
             justify={{lg: "center"}}
           >
-            <BotijaoCard botijao="P13" />
-            <BotijaoCard botijao="P45" />
+            <BotijaoCard botijao="P13" intPrice={p13Int} centsPrice={p13Cents}/>
+            <BotijaoCard botijao="P45" intPrice={p45Int} centsPrice={p45Cents}/>
           </Flex>
         </Flex>
       </Box>
