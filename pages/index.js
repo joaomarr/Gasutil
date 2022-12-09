@@ -44,6 +44,7 @@ export default function Home() {
     <>
       <Head>
         <title>Gasutil - Revendedora Ultragaz</title>
+        <meta name="google-site-verification" content="078S5aIpHRJ6wjiTU1Op9kotfg3CV7v58QBFfWarFTk" />
       </Head>
       <Navbar />
       <Box
