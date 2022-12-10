@@ -45,6 +45,14 @@ export default function Home() {
       <Head>
         <title>Gasutil - Revendedora Ultragaz</title>
         <meta name="google-site-verification" content="078S5aIpHRJ6wjiTU1Op9kotfg3CV7v58QBFfWarFTk" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11026273781"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-11026273781');
+        </script>
       </Head>
       <Navbar />
       <Box
